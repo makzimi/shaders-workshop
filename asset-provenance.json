@@ -1,0 +1,275 @@
+{
+  "scope": "Exact reference assets for the authorized local workshop. Public release is separate.",
+  "assets": [
+    {
+      "file": "app/src/main/res/drawable/ic_ing_cup_cup.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_cup_cup.webp",
+      "sha256": "69b449b9422de7d936a1f3cba153bd5e291c90fca10b11837f546eaa2ad66ab4"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_cup_own_cup.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_cup_own_cup.webp",
+      "sha256": "1337d21ac6f2be7b55dc754caa00fd227a1d9b1fa2937440f4e8032a33d0594a"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_cup_sleeve_with_cup_sleeve.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_cup_sleeve_with_cup_sleeve.webp",
+      "sha256": "3b16b6f089265ffe03edc8b1bcda4bd40715603cc342fdeab341d820896ed5f3"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_cup_sleeve_without_cup_sleeve.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_cup_sleeve_without_cup_sleeve.webp",
+      "sha256": "8f6af3910acf3ca752cfaa6666993d439c181d1e3cd1694b567a8d378af6d989"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_espresso_espresso_decaf_shot.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_espresso_espresso_decaf_shot.webp",
+      "sha256": "8803666b29d13ac0ec9ceb4cc43296f0daef78969c06f0120c1d78555e02ddae"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_espresso_espresso_shot.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_espresso_espresso_shot.webp",
+      "sha256": "cfcf7855213c49f9ec275324a6a42820a04c1c96abbbef63e48de5fd29482eb7"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_foams_and_mousses_cheese_foam.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_foams_and_mousses_cheese_foam.webp",
+      "sha256": "8871bdbdac00af85237d09562039a4db14efc487b08eb36e3c484f5e5fc569fb"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_foams_and_mousses_mango_foam.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_foams_and_mousses_mango_foam.webp",
+      "sha256": "43aa1e2976875e71b98f9429c7f52818328df887e393636f1b546c73a0adc50b"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_healthy_add_ons_marine_collagen.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_healthy_add_ons_marine_collagen.webp",
+      "sha256": "33f3bab582c4bf0a9894619f0c7bb02bba7b01f2b5fd0d87c7abaa2284a829d6"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_healthy_add_ons_mct_oil.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_healthy_add_ons_mct_oil.webp",
+      "sha256": "e31f4eefe1a16c18ede9883d03b7ca328b93b6f0bffd4b3ba7db20b098c0c2c7"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_healthy_add_ons_vanilla_protein.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_healthy_add_ons_vanilla_protein.webp",
+      "sha256": "301a1ab2551f7134e68980e89fc0c3259b575c4250dc852bbcf31b98cdab2936"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_lid_lid.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_lid_lid.webp",
+      "sha256": "7a1691167e86aa88eb6fcc3e71442b7a328dc678a7c08377192ade1c16f54ce2"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_lid_without_lid.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_lid_without_lid.webp",
+      "sha256": "b9268efe4f11ba3bf6aed9401b6f72a20cb4af3b9b18ae5e19771ae66285f7df"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_milk_almond_milk.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_milk_almond_milk.webp",
+      "sha256": "a32cc690ae7045d2af3ad2730a06db0de34d98ae4b0e5290eb2e8e11198c6676"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_milk_banana_milk.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_milk_banana_milk.webp",
+      "sha256": "2bff7fc0d86e39b67be211d86f69ff5545e514cd9eb7558e19ed72b084db6314"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_milk_coconut_milk.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_milk_coconut_milk.webp",
+      "sha256": "6afaad6f30c09e6e980572e0e4690588403eaf15d94d357d3de343ae34964a5e"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_milk_cow_milk.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_milk_cow_milk.webp",
+      "sha256": "06659175b1e564a6921bfcca0254e1c1a35319b5ebaea435b48306f9a707d53e"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_milk_cream.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_milk_cream.webp",
+      "sha256": "ddf8733d960e129b03bc95797a12103872a8ef0f1b6264fb0988518f1c04ea3b"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_milk_hazelnut_milk.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_milk_hazelnut_milk.webp",
+      "sha256": "116f024055c08889ebde26c78f8894e01ce1ea5b67848f8f4c0717c08d700df3"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_milk_lactose_free_milk.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_milk_lactose_free_milk.webp",
+      "sha256": "1e243d56808e732d77b5f46c5ec2dc29cf0702577269d1b7c9a3f33e845f7abe"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_milk_oat_milk.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_milk_oat_milk.webp",
+      "sha256": "a2b2abc551e700ab30280138b82166f69cf4620a2b57b84cbf9600e619e83a67"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_shot_of_cocoa_cocoa.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_shot_of_cocoa_cocoa.webp",
+      "sha256": "0989d72664cb3e8c683eb7e33fc9b60e9ef5b580e5635500cba70f65850e5d9f"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_shot_of_cocoa_cocoa_sugar.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_shot_of_cocoa_cocoa_sugar.webp",
+      "sha256": "0989d72664cb3e8c683eb7e33fc9b60e9ef5b580e5635500cba70f65850e5d9f"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sprinkles_blueberry_ube_sprinkles.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sprinkles_blueberry_ube_sprinkles.webp",
+      "sha256": "5ce12abfc831687c88391ab299895acaad189b8aec8eca1ab1f31836199fea93"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sprinkles_cinnamon.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sprinkles_cinnamon.webp",
+      "sha256": "0bff19b1d84aa0d68f2acfe6a792cb37add24dc6114efe056a9c0fcf2c4f8890"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sprinkles_cookie_crumble_topping.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sprinkles_cookie_crumble_topping.webp",
+      "sha256": "931d9db1fdebd087730a817f6d27b68363c91a9cf64679d71d9775aba35df881"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sprinkles_flower_mix.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sprinkles_flower_mix.webp",
+      "sha256": "16c24ae8b200e55acaf60eed7a717319850349935c7156f2a466ec7275637cd3"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sprinkles_freeze_dried_raspberries.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sprinkles_freeze_dried_raspberries.webp",
+      "sha256": "6daf90003ff59cced6dca28a07bef90c035f41d696ef8addb3642d1a8db8dc9d"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sprinkles_mango_topping.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sprinkles_mango_topping.webp",
+      "sha256": "3485b4425c93eef168be475a66b011d742ebd6cf58e4df56c056fa35635b674e"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sprinkles_marshmallow.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sprinkles_marshmallow.webp",
+      "sha256": "8c54415048f991274278ed399a90b1bd620a5b51e2f3267ec3c627ee1155ab5d"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sprinkles_powder_cocoa.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sprinkles_powder_cocoa.webp",
+      "sha256": "0989d72664cb3e8c683eb7e33fc9b60e9ef5b580e5635500cba70f65850e5d9f"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sprinkles_raspberry_powder.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sprinkles_raspberry_powder.webp",
+      "sha256": "cbd7dc596da8115160dd7d6e9476a7f30b67a6cfab539dd17e17a03a3615c05b"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sugar_sugar.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sugar_sugar.webp",
+      "sha256": "b57ebae1b84c15d6c8747fbb856196d08a1567dc2d4507d13f5ac4abc72a52f6"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sugar_sugar_brown.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sugar_sugar_brown.webp",
+      "sha256": "193565415e9b2bd383473e473f71db18cae3df4ddb55033c05b1ea016c4092e5"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_sugar_sweetener.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_sugar_sweetener.webp",
+      "sha256": "34b47ac3a096c24c9c987f270ed796f9097b10cae4d5c1a570c987b2be6f81dc"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_syrups_blackberry_syrup.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_syrups_blackberry_syrup.webp",
+      "sha256": "e180a1f491081e03400e98baf32e49ca5e672e62f564c3503d1084def278da36"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_syrups_syrup_banana.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_syrups_syrup_banana.webp",
+      "sha256": "0679b8bbf7439f1f132ac2d3774ed5cc95434da530bdb1947987d9caeeb25fd3"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_syrups_syrup_caramel.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_syrups_syrup_caramel.webp",
+      "sha256": "da4319da4f88e3d7d1d460228491cf0da4c71a9509740470716f0b821c365ea1"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_syrups_syrup_chestnut.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_syrups_syrup_chestnut.webp",
+      "sha256": "7dc1bea8b85de43f7498a1c0106e972a75909864c8b347fa1969a562a0559202"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_syrups_syrup_coconut.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_syrups_syrup_coconut.webp",
+      "sha256": "4e4d38a1da4cb71dd457ff286db48a74dbfb35bba4020861d1fbd7b18a0891df"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_syrups_syrup_ginger.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_syrups_syrup_ginger.webp",
+      "sha256": "956a9a9b2c3795779d586bad9a2839f583124ba3eeca64b44fbcad737e0ede4e"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_syrups_syrup_mint.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_syrups_syrup_mint.webp",
+      "sha256": "ab54096f36aa699894dd0c3e32824ac4a50ae781be63c1e844f64a914758cbbf"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_syrups_syrup_raspberry.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_syrups_syrup_raspberry.webp",
+      "sha256": "f3cb8bd336223ff42b65dff2ad82ea23d3fcb530f09b53ae6ee1ba8c7488088e"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_syrups_syrup_vanilla.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_syrups_syrup_vanilla.webp",
+      "sha256": "6527de70da0ebc1dc5c11d77d61e27c9c1b90a97021e396a1bb01105a995674d"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_temperature_hotter.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_temperature_hotter.webp",
+      "sha256": "374c84ab95c2cfa8736af033f83e31b94dc3020ea73b24f7c0f04ee7119f8a2d"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_temperature_standard.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_temperature_standard.webp",
+      "sha256": "58b1fadf0e5426e076653f9f69279500f1142112e61e7faea2ad46825fdc6ba1"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_toppings_mango_sauce.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_toppings_mango_sauce.webp",
+      "sha256": "5d2e20cdb9b2245e91b7d0e2aad08167ce11269b98cdaa477083f5b9663a41b4"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_toppings_salted_caramel_sau_e.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_toppings_salted_caramel_sau_e.webp",
+      "sha256": "0506f79593d9e0ecae49cb0e5ca18e139c6ca28d4187ebb5eff04b3293c42aee"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_ing_toppings_taro_sauce.webp",
+      "reference": "android/app/src/main/res/drawable/ic_ing_toppings_taro_sauce.webp",
+      "sha256": "281b2b39863482a7a5d4b397126231795a3a91a4b444880d962bc657295f0b5f"
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_the_upside_down.xml",
+      "reference": "android/app/src/main/res/drawable/ic_the_upside_down.xml",
+      "sha256": "0e7cbe008cf975e6117c1b56a380a9ee5836deea68b3abdf6411189fb4d5f92f"
+    },
+    {
+      "file": "app/src/main/res/font/suisse_intl_regular.otf",
+      "reference": "android/app/src/main/res/font/suisse_intl_regular.otf",
+      "sha256": "5297552a7c5651d97640983722bf03a1bbb0038639dc064038bf60c0e858bcaf"
+    },
+    {
+      "file": "app/src/main/res/font/suisse_intl_text_l.otf",
+      "reference": "android/app/src/main/res/font/suisse_intl_text_l.otf",
+      "sha256": "83c6a3a85873c3519d0da6e2efb84e8495319bc13b03b1792cbdb800f7ead766"
+    },
+    {
+      "file": "app/src/main/res/raw/cappuccino.mp4",
+      "reference": "android/app/src/main/res/raw/cappuccino.mp4",
+      "sha256": "530017302b685097af6d0d8f464754c2ed870c6090a5e172e9a63b6d9bcdb89e"
+    },
+    {
+      "file": "app/src/main/res/drawable-nodpi/cappuccino_cover.jpg",
+      "reference": "android/app/src/main/res/drawable-nodpi/cappuccino_cover.jpg",
+      "sha256": "262a8f8998c4bbf9d267df2ae52f5295177325ad4bc6c056c3a7aee72a4052b3"
+    }
+  ]
+}
