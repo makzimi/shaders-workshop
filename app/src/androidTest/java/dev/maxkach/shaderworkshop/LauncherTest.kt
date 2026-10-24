@@ -20,24 +20,24 @@ class LauncherTest {
             "Upside Down: Start" to false, "Upside Down: Finish" to true,
         )) {
             compose.onAllNodes(hasClickAction()).assertCountEquals(4)
-            compose.onNodeWithText(label).performClick()
+            compose.onNodeWithContentDescription(label).performClick()
             compose.onNodeWithText("Cappuccino").assertIsDisplayed()
             compose.onNodeWithContentDescription(if (active) "Back to normal" else "Upside Down").assertIsDisplayed()
             compose.onNodeWithContentDescription("Back").performClick()
-            compose.onNodeWithText(label).assertIsDisplayed()
+            compose.onNodeWithContentDescription(label).assertIsDisplayed()
         }
     }
 
     @Test fun systemBackReturnsAndReentryResetsTheExercise() {
-        compose.onNodeWithText("Spotlight: Start").performClick()
+        compose.onNodeWithContentDescription("Spotlight: Start").performClick()
         compose.onNodeWithContentDescription("Upside Down").performClick()
         compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
-        compose.onNodeWithText("Spotlight: Start").performClick()
+        compose.onNodeWithContentDescription("Spotlight: Start").performClick()
         compose.onNodeWithContentDescription("Upside Down").assertIsDisplayed()
     }
 
     @Test fun recreationKeepsTheSelectedExercise() {
-        compose.onNodeWithText("Upside Down: Finish").performClick()
+        compose.onNodeWithContentDescription("Upside Down: Finish").performClick()
         compose.activityRule.scenario.recreate()
         compose.onNodeWithText("Cappuccino").assertIsDisplayed()
         compose.onNodeWithContentDescription("Back to normal").assertIsDisplayed()
