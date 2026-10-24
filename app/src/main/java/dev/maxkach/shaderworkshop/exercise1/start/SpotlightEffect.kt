@@ -7,12 +7,14 @@ import dev.maxkach.shaderworkshop.kotlinEffect
 import dev.maxkach.shaderworkshop.shared.effect.UpsideDownEffectState
 
 @Composable
-fun Modifier.spotlightWorkshopEffect(effect: UpsideDownEffectState): Modifier {
+fun Modifier.spotlightWorkshopEffect(
+    effect: UpsideDownEffectState
+): Modifier {
     val spotlight = remember { kotlinSpotlight() }
     var result = this
-    // STEP-BEGIN spotlight-attach-1: Attach only while the original product effect icon is active.
-    /*
+
+    // Attach only while the original product effect icon is active.
     result = if (effect.isActive) result.kotlinEffect(spotlight, effect.snapshot.timeSeconds) else result
-    */
+
     return result
 }
