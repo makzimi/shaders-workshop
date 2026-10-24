@@ -1,4 +1,4 @@
-package dev.maxkach.shaderworkshop.shared.effect.mesh
+package dev.maxkach.shaderworkshop.exercise2.end.vines
 
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals

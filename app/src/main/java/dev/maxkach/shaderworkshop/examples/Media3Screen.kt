@@ -11,9 +11,10 @@ import kotlinx.collections.immutable.persistentListOf
 import dev.maxkach.shaderworkshop.SampleScaffold
 import dev.maxkach.shaderworkshop.card.DemoProductCard
 import dev.maxkach.shaderworkshop.shared.effect.rememberUpsideDownEffectState
-import dev.maxkach.shaderworkshop.exercise2.end.agsl.upsideDownAgsl
-import dev.maxkach.shaderworkshop.shared.effect.mesh.upsideDownRouteVines
-import dev.maxkach.shaderworkshop.shared.effect.snow.upsideDownSnow
+import dev.maxkach.shaderworkshop.exercise2.end.glitch.upsideDownGlitch
+import dev.maxkach.shaderworkshop.exercise2.end.grading.upsideDownGrading
+import dev.maxkach.shaderworkshop.exercise2.end.vines.upsideDownVines
+import dev.maxkach.shaderworkshop.exercise2.end.snow.upsideDownSnow
 import dev.maxkach.shaderworkshop.shared.effect.gl.UpsideDownGlEffect
 import dev.maxkach.shaderworkshop.player.SurfaceViewVideo
 import dev.maxkach.shaderworkshop.player.rememberDemoPlayer
@@ -25,10 +26,10 @@ fun Media3Screen(startActive: Boolean = false, shadeUi: Boolean = true, onBack: 
     val videoEffect = remember(effect) { UpsideDownGlEffect(effect) }
     val player = rememberDemoPlayer(effects = persistentListOf(videoEffect))
     SampleScaffold(player, onBack) {
-        val overlays = if (shadeUi) Modifier.upsideDownSnow(effect).upsideDownRouteVines(effect) else Modifier
+        val overlays = if (shadeUi) Modifier.upsideDownSnow(effect).upsideDownVines(effect) else Modifier
         Box(Modifier.fillMaxSize().then(overlays)) {
             DemoProductCard(
-                chromeModifier = if (shadeUi) Modifier.upsideDownAgsl(effect, particleCount = 0, drawVines = false) else Modifier,
+                chromeModifier = if (shadeUi) Modifier.upsideDownGlitch(effect).upsideDownGrading(effect) else Modifier,
                 isUpsideDownActive = effect.isActive,
                 onUpsideDownClick = effect::toggle,
                 background = { SurfaceViewVideo(player, Modifier.matchParentSize()) },

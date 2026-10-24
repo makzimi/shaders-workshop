@@ -17,7 +17,7 @@ with tempfile.TemporaryDirectory(prefix='shader-workshop-recovery-') as t:
     shutil.copytree(root, copy, ignore=shutil.ignore_patterns('build', '.gradle', '.kotlin', 'captures', '__pycache__', 'local.properties'))
     for exercise, files in {
         'exercise1': ['SpotlightShader.kt', 'SpotlightEffect.kt'],
-        'exercise2': ['agsl/AgslShaders.kt', 'WorkshopEffect.kt'],
+        'exercise2': ['grading/GradingShader.kt', 'glitch/GlitchShader.kt', 'vines/VinesShader.kt', 'WorkshopEffect.kt'],
     }.items():
         for name in files:
             body = (copy / source_path / exercise / 'end' / name).read_text()

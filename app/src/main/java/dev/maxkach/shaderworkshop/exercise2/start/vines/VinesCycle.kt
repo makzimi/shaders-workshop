@@ -1,4 +1,4 @@
-package dev.maxkach.shaderworkshop.shared.effect.mesh
+package dev.maxkach.shaderworkshop.exercise2.start.vines
 
 import kotlin.random.Random
 

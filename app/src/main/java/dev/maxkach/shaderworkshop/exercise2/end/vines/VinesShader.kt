@@ -1,29 +1,6 @@
-package dev.maxkach.shaderworkshop.shared.effect.mesh
+package dev.maxkach.shaderworkshop.exercise2.end.vines
 
 import org.intellij.lang.annotations.Language
-
-const val VineVertexFloats = 8
-const val VineVertexStrideBytes = VineVertexFloats * Float.SIZE_BYTES
-
-fun packVineVertices(line: VineCenterline): FloatArray {
-  val out = FloatArray(line.count * 2 * VineVertexFloats)
-  var o = 0
-  for (i in 0 until line.count) {
-    val prev = maxOf(i - 1, 0)
-    val next = minOf(i + 1, line.count - 1)
-    for (side in floatArrayOf(1f, -1f)) {
-      out[o++] = line.x(i)
-      out[o++] = line.y(i)
-      out[o++] = line.x(prev)
-      out[o++] = line.y(prev)
-      out[o++] = line.x(next)
-      out[o++] = line.y(next)
-      out[o++] = i.toFloat()
-      out[o++] = side
-    }
-  }
-  return out
-}
 
 @Language("AGSL")
 val VINES_VERTEX_SHADER = """

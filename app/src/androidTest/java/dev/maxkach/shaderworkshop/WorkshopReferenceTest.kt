@@ -59,11 +59,12 @@ class WorkshopReferenceTest {
 
     @Test fun originalAndStarterShadersCompile() {
         listOf(
-            dev.maxkach.shaderworkshop.exercise2.end.agsl.GLITCH_SHADER,
-            dev.maxkach.shaderworkshop.exercise2.end.agsl.upsideDownShader(0),
-            dev.maxkach.shaderworkshop.shared.effect.snow.SNOW_SHADER,
-            dev.maxkach.shaderworkshop.exercise2.start.agsl.GLITCH_SHADER,
-            dev.maxkach.shaderworkshop.exercise2.start.agsl.upsideDownShader(0),
+            dev.maxkach.shaderworkshop.exercise2.end.glitch.GLITCH_SHADER,
+            dev.maxkach.shaderworkshop.exercise2.end.grading.GRADING_SHADER,
+            dev.maxkach.shaderworkshop.exercise2.end.snow.SNOW_SHADER,
+            dev.maxkach.shaderworkshop.exercise2.start.snow.SNOW_SHADER,
+            dev.maxkach.shaderworkshop.exercise2.start.glitch.GLITCH_SHADER,
+            dev.maxkach.shaderworkshop.exercise2.start.grading.GRADING_SHADER,
             dev.maxkach.shaderworkshop.examples.spotlightSource,
         ).forEach { RuntimeShader(it) }
         dev.maxkach.shaderworkshop.exercise1.start.kotlinSpotlight().effect.newInstance()

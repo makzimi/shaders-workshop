@@ -1,4 +1,4 @@
-package dev.maxkach.shaderworkshop.shared.effect.snow
+package dev.maxkach.shaderworkshop.exercise2.start.snow
 
 import org.intellij.lang.annotations.Language
 

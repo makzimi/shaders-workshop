@@ -5,7 +5,8 @@ from pathlib import Path
 STEP = re.compile(r'(?m)(// STEP-BEGIN ([\w-]+):[^\n]+\n)[ \t]*/\*\n([\s\S]*?)\n[ \t]*\*/')
 EXERCISE_FILES = (
     'exercise1/start/SpotlightEffect.kt', 'exercise1/start/SpotlightShader.kt',
-    'exercise2/start/agsl/AgslShaders.kt', 'exercise2/start/WorkshopEffect.kt',
+    'exercise2/start/grading/GradingShader.kt', 'exercise2/start/glitch/GlitchShader.kt',
+    'exercise2/start/vines/VinesShader.kt', 'exercise2/start/WorkshopEffect.kt',
 )
 
 def uncomment(source):

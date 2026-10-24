@@ -1,5 +1,5 @@
 @file:Suppress("all")
-package dev.maxkach.shaderworkshop.shared.effect
+package dev.maxkach.shaderworkshop.exercise2.start.vines
 
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
