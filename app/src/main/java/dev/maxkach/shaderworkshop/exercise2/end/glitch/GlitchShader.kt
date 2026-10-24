@@ -15,10 +15,6 @@ val GLITCH_SHADER =
     vec4 red = vec4(1.0, 0.0, 0.0, 1.0);
     vec4 cyan = vec4(0.0, 1.0, 1.0, 1.0);
 
-    float random(float seed) {
-        return fract(sin(seed) * 100000.0);
-    }
-
     float random(float2 seed) {
         return fract(sin(dot(seed, float2(12.9898, 78.233))) * 43758.5453123);
     }
