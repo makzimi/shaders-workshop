@@ -14,7 +14,11 @@ fun Modifier.spotlightWorkshopEffect(
     var result = this
 
     // Attach only while the original product effect icon is active.
-    result = if (effect.isActive) result.kotlinEffect(spotlight, effect.snapshot.timeSeconds) else result
+//    result = if (effect.isActive) {
+//        result.kotlinEffect(spotlight, effect.snapshot.timeSeconds)
+//    } else {
+//        result
+//    }
 
     return result
 }
