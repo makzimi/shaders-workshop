@@ -57,7 +57,8 @@ class MainActivity : ComponentActivity() {
                                 selectedName = choice.name
                             }
                             WorkshopExample.SpotlightStart, WorkshopExample.Starter -> SpotlightStart(startActive, back)
-                            WorkshopExample.SpotlightFinish, WorkshopExample.FirstShader -> SpotlightFinish(startActive, back)
+                            WorkshopExample.SpotlightFinish -> SpotlightFinish(startActive, back)
+                            WorkshopExample.FirstShader -> FirstShaderScreen(startActive, onBack = back)
                             WorkshopExample.UpsideDownStart -> UpsideDownStart(startActive, back)
                             WorkshopExample.UpsideDownFinish, WorkshopExample.NoVideoAgsl -> UpsideDownFinish(startActive, back)
                             WorkshopExample.FirstShaderKotlin -> FirstShaderScreen(startActive, kotlin = true, onBack = back)

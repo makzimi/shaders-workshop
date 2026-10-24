@@ -1,18 +1,20 @@
 package dev.maxkach.shaderworkshop.exercise1.end
 
-import org.intellij.lang.annotations.Language
+import dev.maxkach.shaderworkshop.KotlinExample
+import ru.redbyte.redbytefx.*
 
-@Language("AGSL")
-const val spotlightSource = """
-uniform shader content;
-uniform float2 resolution;
-uniform float time;
-half4 main(float2 p) {
-    float2 uv = p / resolution;
-    float2 center = float2(0.5 + 0.25 * sin(time), 0.5);
-    float2 delta = (uv - center) * float2(resolution.x / resolution.y, 1.0);
-    float light = 1.0 - smoothstep(0.08, 0.35, length(delta));
-    half4 c = content.eval(p);
-    return half4(c.rgb * (0.25 + 0.75 * light), c.a);
+fun kotlinSpotlight(): KotlinExample {
+    var timeHandle: FxParam.Float? = null
+    val effect = redbytefx {
+        val t = uniformTime(0f, "time")
+        timeHandle = t
+        val uv = fragCoord / resolution
+        val center = float2(0.5f + 0.25f * sin(t), 0.5f)
+        val delta = (uv - center) * float2(resolution.x / resolution.y, 1f)
+        val light = 1f - smoothstep(0.08f, 0.35f, length(delta))
+        val c = let(sample(), "input_color")
+        val gain = 0.25f + 0.75f * light
+        color(c.r * gain, c.g * gain, c.b * gain, c.a)
+    }
+    return KotlinExample(effect, requireNotNull(timeHandle))
 }
-"""

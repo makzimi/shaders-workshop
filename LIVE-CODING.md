@@ -2,6 +2,8 @@
 
 Run the app. Show **Finish**, press Back, then open **Start** for the exercise. Edit Start only. Remove `/*` and `*/` under each numbered cue; leave the code and final return in place. Run after each row. Tap the card's effect icon after attaching the shader.
 
+Exercise 1 uses the RedByteFX Kotlin DSL in both `start/` and `end/`. The host and typed time uniform are supplied setup. Each commented Kotlin step builds on the previous one. The original AGSL comparison lives in `examples/AgslSpotlight.kt`.
+
 Exercise 2 follows **color grading → glitch**. Helpers and snow/vine attachments are supplied setup.
 
 Paths are inside `app/src/main/java/dev/maxkach/shaderworkshop/`.
@@ -11,8 +13,8 @@ Paths are inside `app/src/main/java/dev/maxkach/shaderworkshop/`.
 | **1 · Spotlight, 7 min** | “Connect a shader that returns the original pixel.” | `exercise1/start/SpotlightEffect.kt`: `spotlight-attach-1`. |
 | 2 | “Normalize pixels, then move the light with time.” | `exercise1/start/SpotlightShader.kt`: `spotlight-1–2`. |
 | 3 | “Correct the aspect ratio so the light stays circular.” | Same file: `spotlight-3`. |
-| 4 | “Smoothstep gives the light a soft edge.” | Same file: `spotlight-4`. Try the `0.35` radius. |
-| 5 | “Dim the outside, but preserve alpha.” | Same file: `spotlight-5`. Try the `0.25` brightness floor. |
+| 4 | “Smoothstep gives the light a soft edge.” | Same file: `spotlight-4`. Try the `0.35f` radius. |
+| 5 | “Dim the outside, but preserve alpha.” | Same file: `spotlight-5`. Try the `0.25f` brightness floor. |
 | **6 · Upside Down, 10 min** | “Start again from the clean card.” | Back → **Upside Down: Start**. `exercise2/start/agsl/AgslShaders.kt`, top `upsideDownShader` block: `grade-1–5` helpers. |
 | 7 | “Attach the prepared snow, vines and AGSL layer.” | `exercise2/start/WorkshopEffect.kt`: `upside-attach-1–3`; tap the effect icon. |
 | 8 | “Sample the pixel and convert RGB to HSV.” | `exercise2/start/agsl/AgslShaders.kt`: `grade-6–8`. |

@@ -7,7 +7,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import tempfile
-from exercise_steps import complete_starter
+from exercise_steps import STEP, EXERCISE_FILES, complete_starter
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -20,6 +20,22 @@ def verify(output, device):
         raise ValueError('Choose a fresh output directory outside the source project')
     before = hashes()
     shutil.copytree(ROOT, output, ignore=shutil.ignore_patterns('build', '.gradle', '.kotlin', 'captures', '__pycache__', 'local.properties'))
+    source = output / 'app/src/main/java/dev/maxkach/shaderworkshop'
+    originals = {}
+    for name in EXERCISE_FILES:
+        if not name.startswith('exercise1/'):
+            continue
+        file = source / name
+        originals[name] = file.read_text()
+        current = originals[name]
+        while STEP.search(current):
+            step = STEP.search(current)
+            current = STEP.sub(lambda m: m[1] + m[3], current, count=1)
+            file.write_text(current)
+            print(f'Checking Kotlin workshop step: {step[2]}', flush=True)
+            subprocess.run([str(output / 'gradlew'), '-p', str(output), ':app:compileDebugKotlin'], check=True)
+    for name, original in originals.items():
+        (source / name).write_text(original)
     steps = complete_starter(output)
     command = [str(output / 'gradlew'), '-p', str(output), ':app:assembleDebug', ':app:assembleDebugAndroidTest']
     subprocess.run(command, check=True)

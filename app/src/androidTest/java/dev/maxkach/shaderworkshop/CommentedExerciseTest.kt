@@ -17,10 +17,6 @@ class CommentedExerciseTest {
         }
     }
 
-    @Test fun spotlightCanBeUncommentedOneStepAtATime() {
-        checkSteps(dev.maxkach.shaderworkshop.exercise1.start.spotlightSource, 4)
-    }
-
     @Test fun originalGradeCanBeUncommentedOneStepAtATime() {
         checkSteps(dev.maxkach.shaderworkshop.exercise2.start.agsl.upsideDownShader(0), 8)
         checkSteps(dev.maxkach.shaderworkshop.exercise2.start.agsl.upsideDownShader(4), 8)

@@ -9,6 +9,7 @@ import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
 import dev.maxkach.shaderworkshop.examples.FirstShaderScreen
 import dev.maxkach.shaderworkshop.exercise1.start.Screen as SpotlightStart
+import dev.maxkach.shaderworkshop.exercise1.end.Screen as SpotlightFinish
 import dev.maxkach.shaderworkshop.exercise2.start.Screen as UpsideDownStart
 import dev.maxkach.shaderworkshop.teaching.CaptureOptions
 import dev.maxkach.shaderworkshop.teaching.LocalCaptureOptions
@@ -38,7 +39,10 @@ class WorkshopReferenceTest {
         val typed = mutableStateOf(false)
         compose.setContent {
             CompositionLocalProvider(LocalCaptureOptions provides CaptureOptions(enabled = true, fixedEffect = true)) {
-                MaterialTheme { FirstShaderScreen(startActive = true, kotlin = typed.value) }
+                MaterialTheme {
+                    if (typed.value) SpotlightFinish()
+                    else FirstShaderScreen(startActive = true)
+                }
             }
         }
         val raw = compose.onRoot().captureToImage().toPixelMap()
@@ -53,16 +57,16 @@ class WorkshopReferenceTest {
         assertTrue("Same math must render the same card", difference / count < 0.025f)
     }
 
-    @Test fun originalAndStarterAgslCompile() {
+    @Test fun originalAndStarterShadersCompile() {
         listOf(
             dev.maxkach.shaderworkshop.exercise2.end.agsl.GLITCH_SHADER,
             dev.maxkach.shaderworkshop.exercise2.end.agsl.upsideDownShader(0),
             dev.maxkach.shaderworkshop.shared.effect.snow.SNOW_SHADER,
             dev.maxkach.shaderworkshop.exercise2.start.agsl.GLITCH_SHADER,
             dev.maxkach.shaderworkshop.exercise2.start.agsl.upsideDownShader(0),
-            dev.maxkach.shaderworkshop.exercise1.start.spotlightSource,
-            dev.maxkach.shaderworkshop.exercise1.end.spotlightSource,
+            dev.maxkach.shaderworkshop.examples.spotlightSource,
         ).forEach { RuntimeShader(it) }
-        dev.maxkach.shaderworkshop.examples.kotlinSpotlight().effect.newInstance()
+        dev.maxkach.shaderworkshop.exercise1.start.kotlinSpotlight().effect.newInstance()
+        dev.maxkach.shaderworkshop.exercise1.end.kotlinSpotlight().effect.newInstance()
     }
 }

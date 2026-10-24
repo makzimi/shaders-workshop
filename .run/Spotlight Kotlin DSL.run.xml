@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Spotlight Kotlin DSL" type="AndroidRunConfigurationType" factoryName="Android App">
+    <module name="shaders-workshop.app" />
+    <option name="MODE" value="default_activity" />
+    <option name="ACTIVITY_EXTRA_FLAGS" value="--es example FirstShaderKotlin --ez effect true" />
+    <method v="2">
+      <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>

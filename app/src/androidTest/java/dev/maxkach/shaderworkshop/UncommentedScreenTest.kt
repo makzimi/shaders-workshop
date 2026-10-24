@@ -8,7 +8,7 @@ import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.test.platform.app.InstrumentationRegistry
-import dev.maxkach.shaderworkshop.examples.FirstShaderScreen
+import dev.maxkach.shaderworkshop.exercise1.end.Screen as SpotlightFinish
 import dev.maxkach.shaderworkshop.examples.NoVideoScreen
 import dev.maxkach.shaderworkshop.exercise1.start.Screen as SpotlightStart
 import dev.maxkach.shaderworkshop.exercise2.start.Screen as UpsideDownStart
@@ -31,7 +31,7 @@ class UncommentedScreenTest {
                 MaterialTheme {
                     key(starter.value) {
                         if (starter.value) if (spotlight) SpotlightStart(startActive = true) else UpsideDownStart(startActive = true)
-                        else if (spotlight) FirstShaderScreen(startActive = true)
+                        else if (spotlight) SpotlightFinish(startActive = true)
                         else NoVideoScreen(startActive = true)
                     }
                 }

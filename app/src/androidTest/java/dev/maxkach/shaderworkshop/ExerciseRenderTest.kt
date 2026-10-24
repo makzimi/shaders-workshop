@@ -55,13 +55,6 @@ class ExerciseRenderTest {
         assertTrue("Uncommented exercise must render like the independent original answer: ${difference / count}", difference / count < 0.002f)
     }
 
-    @Test fun uncommentedSpotlightRendersLikeFinish() {
-        compare(uncomment(dev.maxkach.shaderworkshop.exercise1.start.spotlightSource), dev.maxkach.shaderworkshop.exercise1.end.spotlightSource, "content") { shader, w, h ->
-            shader.setFloatUniform("resolution", w, h)
-            shader.setFloatUniform("time", 4f)
-        }
-    }
-
     @Test fun uncommentedGradeRendersLikeOriginal() {
         compare(uncomment(dev.maxkach.shaderworkshop.exercise2.start.agsl.upsideDownShader(0)), dev.maxkach.shaderworkshop.exercise2.end.agsl.upsideDownShader(0), "image") { shader, w, h ->
             shader.setFloatUniform("imageSize", w, h)
