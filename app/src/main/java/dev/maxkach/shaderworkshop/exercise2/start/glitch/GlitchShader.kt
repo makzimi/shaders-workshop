@@ -52,6 +52,7 @@ uniform float realRandom;
 
 half4 main(float2 fragCoord) {
     half4 result = image.eval(fragCoord);
+    
     // Find the horizontal slice and displaced sample coordinates.
 //    float sliceHeight = imageSize.y / float(slices);
 //    float sliceY = floor(fragCoord.y / sliceHeight) * sliceHeight;
