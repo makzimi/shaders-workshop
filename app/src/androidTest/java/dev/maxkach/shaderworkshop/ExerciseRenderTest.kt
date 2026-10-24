@@ -14,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PixelMap
+import androidx.compose.ui.graphics.ShaderBrush
 import androidx.compose.ui.graphics.asComposeRenderEffect
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.nativeCanvas
@@ -76,7 +77,7 @@ class ExerciseRenderTest {
     }
 
     @Test fun uncommentedGlitchRendersLikeOriginal() {
-        compare(uncomment(dev.maxkach.shaderworkshop.exercise2.start.glitch.GLITCH_SHADER), dev.maxkach.shaderworkshop.exercise2.end.glitch.GLITCH_SHADER, "image") { shader, w, h ->
+        compare(CommentedLines.uncommentAll(dev.maxkach.shaderworkshop.exercise2.start.glitch.GLITCH_SHADER), dev.maxkach.shaderworkshop.exercise2.end.glitch.GLITCH_SHADER, "image") { shader, w, h ->
             shader.setFloatUniform("imageSize", w, h)
             shader.setIntUniform("slices", 70)
             shader.setFloatUniform("intensity", 0.8f)
@@ -116,6 +117,38 @@ class ExerciseRenderTest {
         var count = 0
         for (y in 0 until image.height step 3) for (x in 0 until image.width step 3) {
             if (image[x, y].red < 0.5f) count++
+        }
+        return count
+    }
+
+    @Test fun uncommentedSnowRendersLikeOriginal() {
+        val starter = dev.maxkach.shaderworkshop.exercise2.start.snow.SNOW_SHADER
+        val completed = CommentedLines.uncommentAll(starter)
+        val reference = dev.maxkach.shaderworkshop.exercise2.end.snow.SNOW_SHADER
+        val source = mutableStateOf(starter)
+        compose.setContent {
+            val shader = remember(source.value) { RuntimeShader(source.value) }
+            Canvas(Modifier.fillMaxSize()) {
+                drawRect(Color.Black)
+                shader.setFloatUniform("size", size.width, size.height)
+                shader.setFloatUniform("time", 4f)
+                drawRect(ShaderBrush(shader))
+            }
+        }
+        assertTrue("The commented Start must draw no snow", snowPixels(compose.onRoot().captureToImage().toPixelMap()) == 0)
+        compose.runOnIdle { source.value = completed }
+        val actual = compose.onRoot().captureToImage().toPixelMap()
+        compose.runOnIdle { source.value = reference }
+        val expected = compose.onRoot().captureToImage().toPixelMap()
+        assertTrue("The original answer must actually draw snow", snowPixels(expected) > 100)
+        val difference = difference(actual, expected)
+        assertTrue("Uncommented snow must render like the independent original answer: $difference", difference < 0.002f)
+    }
+
+    private fun snowPixels(image: PixelMap): Int {
+        var count = 0
+        for (y in 0 until image.height step 3) for (x in 0 until image.width step 3) {
+            if (image[x, y].red > 0.1f) count++
         }
         return count
     }

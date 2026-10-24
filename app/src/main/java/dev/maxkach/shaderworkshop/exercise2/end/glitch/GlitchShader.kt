@@ -69,7 +69,10 @@ val GLITCH_SHADER =
            }
         } else {
            float2 scaled = scale(displaced, sliceY, sliceY + sliceHeight, imageSize.y, intensity);
-           return image.eval(scaled);
+           half4 color = image.eval(scaled);
+           half4 shifted = image.eval(scaled + float2(imageSize.x * 0.035 * intensity, 0.0));
+           color.r = shifted.r / max(shifted.a, 0.001) * color.a;
+           return color;
         }
     }
 """

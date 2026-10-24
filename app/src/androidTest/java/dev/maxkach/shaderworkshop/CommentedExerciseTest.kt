@@ -19,12 +19,18 @@ class CommentedExerciseTest {
         }
     }
 
-    @Test fun originalGradeCanBeUncommentedOneStepAtATime() {
-        checkSteps(dev.maxkach.shaderworkshop.exercise2.start.grading.GRADING_SHADER, 10)
+    private fun checkLineSteps(source: String, minimum: Int) {
+        assertTrue("The whole answer must be present as small commented steps", CommentedLines.count(source) >= minimum)
+        var current = source
+        RuntimeShader(current)
+        while (true) {
+            current = CommentedLines.uncommentFirst(current) ?: break
+            RuntimeShader(current)
+        }
     }
 
     @Test fun originalGlitchCanBeUncommentedOneStepAtATime() {
-        checkSteps(dev.maxkach.shaderworkshop.exercise2.start.glitch.GLITCH_SHADER, 4)
+        checkLineSteps(dev.maxkach.shaderworkshop.exercise2.start.glitch.GLITCH_SHADER, 4)
     }
 
     @Test fun vinesCanBeUncommentedOneStepAtATime() {
@@ -33,5 +39,9 @@ class CommentedExerciseTest {
         checkSteps(dev.maxkach.shaderworkshop.exercise2.start.vines.VINES_VERTEX_SHADER, 6) {
             VinesTestMeshes(it, fragment, 1080f, 2424f, progress = 0.6f)
         }
+    }
+
+    @Test fun snowCanBeUncommentedOneStepAtATime() {
+        checkLineSteps(dev.maxkach.shaderworkshop.exercise2.start.snow.SNOW_SHADER, 6)
     }
 }

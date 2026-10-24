@@ -20,7 +20,7 @@ The app opens with four buttons. Show **Finish** to see the goal, press Back, th
 | 1. Spotlight | [Clean card and numbered steps](app/src/main/java/dev/maxkach/shaderworkshop/exercise1/start) | [Animated spotlight](app/src/main/java/dev/maxkach/shaderworkshop/exercise1/end) |
 | 2. Upside Down | [Independent clean card and numbered steps](app/src/main/java/dev/maxkach/shaderworkshop/exercise2/start) | [Color grading, glitch, snow and vines](app/src/main/java/dev/maxkach/shaderworkshop/exercise2/end) |
 
-Follow the [compact live-coding guide](LIVE-CODING.md). Remove the block-comment delimiters under each numbered cue. Matching `end/` files contain complete answers. For exercise 2, enable the supplied helpers and attachments, then work through **color grading → glitch → vines**. Snow and video infrastructure are prepared code.
+Follow the [compact live-coding guide](LIVE-CODING.md). Remove the block-comment delimiters under each numbered cue. Matching `end/` files contain complete answers. For exercise 2, enable the supplied helpers and attachments, then work through **color grading → glitch → snow → vines**. Video infrastructure is prepared code.
 
 ## Exercise 1 uses Kotlin shaders
 
@@ -65,7 +65,7 @@ The project pins `io.github.i-redbyte:redbytefx-core:1.0.0` from Maven Central a
 
 [ORSL](https://github.com/openrndr/orsl) also provides Kotlin shader builders but depends on OPENRNDR/ORX. [Kool's KSL](https://kool-engine.github.io/docs/shading.html) generates GLSL/WGSL for its rendering engine. RedByteFX is the closest fit for this sample's Android `RuntimeShader` and Compose layer pipeline.
 
-Exercise 2 uses separate grading and glitch AGSL effects, with supplied snow and step-by-step mesh vines. The video examples additionally contain GLSL for Media3 and raw OpenGL rendering. Those paths need their own migration assessment. The first exercise is a small, useful place to evaluate the DSL before expanding it.
+Exercise 2 uses separate grading and glitch AGSL effects, with step-by-step snow and mesh vines. The video examples additionally contain GLSL for Media3 and raw OpenGL rendering. Those paths need their own migration assessment. The first exercise is a small, useful place to evaluate the DSL before expanding it.
 
 The existing `WorkshopReferenceTest` checks that both spotlight versions compile on Android and compares their rendered product cards at a fixed time. Its pixel comparison is a tolerant check of the red channel, not a guarantee of exact equality across all pixels, channels and devices.
 
