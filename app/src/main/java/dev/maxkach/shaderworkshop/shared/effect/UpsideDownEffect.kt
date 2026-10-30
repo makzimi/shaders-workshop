@@ -75,7 +75,7 @@ fun rememberUpsideDownEffectState(initiallyActive: Boolean = false): UpsideDownE
     while (true) {
       withFrameNanos { frameNanos ->
         if (startNanos == 0L) startNanos = frameNanos
-        val elapsedMillis = (frameNanos - startNanos) / NanosPerMilli
+        val elapsedMillis = effectMillisAt((frameNanos - startNanos) / NanosPerMilli)
         state.publish(snapshotAt(elapsedMillis))
       }
     }
@@ -84,12 +84,18 @@ fun rememberUpsideDownEffectState(initiallyActive: Boolean = false): UpsideDownE
   return state
 }
 
+private fun effectMillisAt(realMillis: Long): Long {
+  if (PlayAtFullSpeed) return realMillis
+  val slowedMillis = realMillis / SlowMotionFactor
+  return slowedMillis - slowedMillis % SlowMotionStepMillis
+}
+
 private fun snapshotAt(elapsedMillis: Long): EffectSnapshot {
   return EffectSnapshot(
       glitchIntensity = glitchIntensityAt(elapsedMillis),
       upsideDownAmount = if (elapsedMillis >= UpsideDownStartMillis) 1f else 0f,
       timeSeconds = elapsedMillis / MillisPerSecond,
-      realRandom = Random.nextFloat(),
+      realRandom = if (PlayAtFullSpeed) Random.nextFloat() else Random(elapsedMillis).nextFloat(),
   )
 }
 
@@ -107,6 +113,9 @@ private fun glitchIntensityAt(elapsedMillis: Long): Float {
   }
 }
 
+private const val PlayAtFullSpeed = true
+private const val SlowMotionFactor = 10L
+private const val SlowMotionStepMillis = 50L
 private const val FirstBurstMillis = 200L
 private const val SecondBurstStartMillis = 500L
 private const val SecondBurstMillis = 500L
